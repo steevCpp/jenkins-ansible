@@ -207,10 +207,10 @@
   </dependencyManagement>
 
   <scm>
-    <connection>scm:git@gitlab.com:bileli/projet_j2ee.git</connection>
-    <developerConnection>scm:git:git@gitlab.com:bileli/projet_j2ee.git</developerConnection>
+    <connection>scm:git@gitlab.com:khlifidev1/projet_j2e.git</connection>
+    <developerConnection>scm:git@gitlab.com:khlifidev1/projet_j2e.git</developerConnection>
     <tag>HEAD</tag>
-    <url>https://gitlab.com/bileli/projet_j2ee/</url>
+    <url>https://gitlab.com/khlifidev1/projet_j2e</url>
   </scm>
 
   <prerequisites>
