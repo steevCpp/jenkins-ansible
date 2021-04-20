@@ -1,6 +1,6 @@
 ---
 - name: copier fichier webappwar
-  hosts: prod1
+  hosts: all
   become: true
 
 
