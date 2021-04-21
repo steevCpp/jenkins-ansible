@@ -23,6 +23,6 @@ node {
 
 sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ansible-playbook -i  /opt/ansible/hosts.yml    /opt/ansible/copy.yml', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//ansible', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/*.war, copy.yml, hosts.yml')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
   
-
+    }
     
 }
