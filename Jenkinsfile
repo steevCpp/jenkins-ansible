@@ -1,5 +1,8 @@
 node { 
     
+    def mvnHome = tool (name: 'maven', type: 'maven')
+
+
     stage('clone') {
         
     git 'https://gitlab.com/khlifidev1/projet_j2e.git'
@@ -8,7 +11,7 @@ node {
     
     stage('build') {
     
-    sh'mvn clean install package'
+    sh "'${mvnHome}/bin/mvn' clean install"
     
     }
     
