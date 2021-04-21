@@ -7,5 +7,5 @@
   tasks:
     - name: copy file
       copy:
-        src: webapp/target/webapp.war
+        src: webapp.war
         dest: /opt/tomcat/latest/webapps
