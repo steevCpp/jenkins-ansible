@@ -24,7 +24,11 @@ node {
 stage('deploy_img'){
 
 
-sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'docker run -d --name myapp_c -p 8010:8080 myapp', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''docker run -d --name myapp_c -p 8010:8080 myapp
+
+docker ps 
+
+curl locathost:8080/webapp
 }
 
     }
