@@ -28,7 +28,6 @@ sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_server', transfe
 
 docker ps 
 
-curl locathost:8080/webapp
 ''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
 }
 
