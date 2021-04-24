@@ -21,14 +21,14 @@ node {
 
 
 
-stage('deploy_img'){
 
+stage('deploy_img'){
 
 sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''
 
-docker rmi myapp
+docker rmi -f myapp
 docker rm -f myapp_c
-docker build -t myapp .
+docker build -t myapp  /opt/docker 
 
 docker run -d --name myapp_c -p 8010:8080 myapp
 
