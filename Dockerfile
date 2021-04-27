@@ -5,3 +5,4 @@ From tomcat:8-jre8
 MAINTAINER "khlifi houcem" 
 
 COPY webapp.war  /usr/local/tomcat/webapps/
+
