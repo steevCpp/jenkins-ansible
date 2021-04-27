@@ -24,8 +24,7 @@ sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_server', transfe
 
 stage('deploy_img'){
 
-sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''docker rmi -f myapp
-docker rm -f myapp_c
+sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible_server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''
 docker build -t myapp  /opt/docker 
 
 docker run -d --name myapp_c -p 8010:8080 myapp''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
