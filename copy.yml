@@ -7,7 +7,7 @@
     - source: ./webapp/target/webapp.war
     - destination: /opt/tomcat/latest/webapps/
 
-   tasks:
+  tasks:
         - name: copie webapp.war
           copy:
               src: "{{source}}"
