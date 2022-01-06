@@ -1,0 +1,14 @@
+---
+
+- name: copie artifact
+  hosts: all
+  become: true
+  vars: 
+    - source: ./webapp/target/webapp.war
+    - destination: /opt/tomcat/latest/webapps/
+
+   tasks:
+        - name: copie webapp.war
+          copy:
+              src: "{{source}}"
+              dest: "{{destination}}"
