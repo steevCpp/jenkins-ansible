@@ -6,6 +6,8 @@ vars:
   source=./webapp/target/webapp.war
   destination=/var/
 tasks:
+  - name: install tomcat
+    apt: install 
   -name: copy
    copy:
     -src: "{{soucre}}"
