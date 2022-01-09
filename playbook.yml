@@ -12,3 +12,10 @@ tasks:
    copy:
     -src: "{{soucre}}"
     -dest: "{{destination}}"
+    
+    
+  handlers:
+    -name: restart tomcat service
+     service:
+       name: tomcat
+       state: restarted
