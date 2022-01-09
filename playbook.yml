@@ -1,6 +1,6 @@
 ---
 - name: copy war
-hosta: all
+hosts: all
 become: yes
 vars:
   source=./webapp/target/webapp.war
