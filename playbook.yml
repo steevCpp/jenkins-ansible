@@ -7,7 +7,7 @@ vars:
   destination=/var/
 tasks:
   - name: install tomcat
-    apt: install 
+    import_tasks: tomcat.yml 
   -name: copy
    copy:
     -src: "{{soucre}}"
