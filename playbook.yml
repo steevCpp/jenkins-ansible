@@ -1,11 +1,11 @@
 ---
 - name: copy war
-hosts: all
-become: yes
-vars:
-  source=./webapp/target/webapp.war
-  destination=/var/
-tasks:
+  hosts: all
+  become: yes
+  vars:
+    source=./webapp/target/webapp.war
+    destination=/var/
+ tasks:
   - name: install tomcat
     import_tasks: tomcat.yml 
   -name: copy
