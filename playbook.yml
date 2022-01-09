@@ -1,0 +1,12 @@
+---
+- name: copy war
+hosta: all
+become: yes
+vars:
+  source=./webapp/target/webapp.war
+  destination=/var/
+tasks:
+  -name: copy
+   copy:
+    -src: "{{soucre}}"
+    -dest: "{{destination}}"
