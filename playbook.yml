@@ -3,8 +3,8 @@
   hosts: all
   become: yes
   vars:
-    source = ./webapp/target/webapp.war
-    destination = /opt/tomcat/latest/webapps/
+    source : webapp/target/webapp.war
+    destination : /opt/tomcat/latest/webapps/
   tasks:
    - name: install tomcat
      import_tasks: tomcat.yml
