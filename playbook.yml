@@ -1,4 +1,6 @@
 ---
+- import_playbook: tomcat.yml
+
 - name: copy war
   hosts: all
   become: yes
@@ -6,8 +8,6 @@
     source : webapp/target/webapp.war
     destination : /opt/tomcat/latest/webapps/
   tasks:
-   - name: install tomcat
-     import_playbook: tomcat.yml
    - name: copy
      copy:
        src: "{{soucre}}"
