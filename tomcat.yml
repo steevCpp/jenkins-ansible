@@ -10,7 +10,7 @@
 
   - name: telecharge package
     get_url:
-      url: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-10.0.14.tar.gz
+      url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.14/bin/apache-tomcat-10.0.14.tar.gz
       dest: /usr/local
 
   - name: extract
