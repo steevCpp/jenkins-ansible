@@ -7,7 +7,7 @@
     destination : /opt/tomcat/latest/webapps/
   tasks:
    - name: install tomcat
-     import_tasks: tomcat.yml
+     import_playbook: tomcat.yml
    - name: copy
      copy:
        src: "{{soucre}}"
