@@ -5,15 +5,15 @@
   vars:
     source = ./webapp/target/webapp.war
     destination = /opt/tomcat/latest/webapps/
- tasks:
-  - name: install tomcat
-    import_tasks: tomcat.yml 
-  -name: copy
-   copy:
-    -src: "{{soucre}}"
-    -dest: "{{destination}}"
-    
-    
+  tasks:
+   - name: install tomcat
+     import_tasks: tomcat.yml
+   -name: copy
+    copy:
+     -src: "{{soucre}}"
+     -dest: "{{destination}}"
+
+
   handlers:
     -name: restart tomcat service
      service:
