@@ -6,7 +6,7 @@
   become: yes
   vars:
     source : webapp/target/webapp.war
-    destination : /opt/tomcat/latest/webapps/
+    destination : /usr/local/apache-tomcat-10.0.14/webapps/
   tasks:
    - name: copy
      copy:
