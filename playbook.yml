@@ -10,7 +10,7 @@
   tasks:
    - name: copy
      copy:
-       src: "{{ soucre }}"
+       src: "{{ source }}"
        dest: "{{ destination }}"
 
 
