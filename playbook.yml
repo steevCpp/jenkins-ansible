@@ -8,14 +8,14 @@
   tasks:
    - name: install tomcat
      import_tasks: tomcat.yml
-   -name: copy
-      copy:
-     -src: "{{soucre}}"
-     -dest: "{{destination}}"
+   - name: copy
+     copy:
+       src: "{{soucre}}"
+       dest: "{{destination}}"
 
 
   handlers:
-    -name: restart tomcat service
-     service:
-       name: tomcat
-       state: restarted
+    - name: restart tomcat service
+      service:
+        name: tomcat
+        state: restarted
