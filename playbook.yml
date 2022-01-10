@@ -10,8 +10,8 @@
   tasks:
    - name: copy
      copy:
-       src: "{{soucre}}"
-       dest: "{{destination}}"
+       src: "{{ soucre }}"
+       dest: "{{ destination }}"
 
 
   handlers:
