@@ -10,14 +10,14 @@
 
   - name: telecharge package
     get_url:
-      url: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-10.0.44.tar.gz
+      url: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-10.0.14.tar.gz
       dest: /usr/local
 
   - name: extract
     unarchive:
-      src: /usr/local/apache-tomcat-10.0.44.tar.gz
+      src: /usr/local/apache-tomcat-10.0.14.tar.gz
       dest: /usr/local
       remote_src: yes
 
-  - name: start tomcat services
-    shell: nohup /usr/local/apache-tomcat-10.0.44/bin/startup.sh
+  - name: start le service tomcat
+    shell: nohup /usr/local/apache-tomcat-10.0.14/bin/startup.sh
