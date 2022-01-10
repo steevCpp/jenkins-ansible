@@ -9,7 +9,7 @@
    - name: install tomcat
      import_tasks: tomcat.yml
    -name: copy
-    copy:
+      copy:
      -src: "{{soucre}}"
      -dest: "{{destination}}"
 
